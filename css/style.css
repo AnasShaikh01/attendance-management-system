@@ -1,0 +1,95 @@
+/* ====== Global overrides (minimal since Tailwind handles most styles) ====== */
+
+/* Navbar / header shadow (Tailwind already has shadow-lg, but keeping this as extra option) */
+#header {
+    background: #1e3a8a; /* Tailwind blue-900 fallback */
+    color: white;
+    box-shadow: 0px -5px 19px 10px rgba(173, 216, 230, 0.4); /* light blue glow */
+    padding: 0 1rem 1rem 1rem;
+    margin-bottom: 2rem;
+}
+
+/* Class card (Tailwind will style most, but keeping hover shadow custom) */
+.class {
+    border: 1px solid #d1d5db; /* Tailwind gray-300 */
+    border-radius: 0.5rem;
+    text-align: center;
+    width: 180px;
+    margin: 0.5rem;
+    padding: 0.75rem;
+    float: left;
+    cursor: pointer;
+    position: relative;
+    background: #ffffff;
+    transition: box-shadow 0.3s ease-in-out;
+}
+.class:hover {
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Delete button inside class card */
+.class:hover .delete-class-warning {
+    display: block !important;
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    border-radius: 50%;
+}
+.delete-class-warning {
+    display: none !important;
+}
+
+/* Add Class button card */
+#addClass {
+    font-size: 3.5rem;
+    padding: 1rem;
+    color: #2563eb; /* Tailwind blue-600 */
+    border: 2px dashed #2563eb;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease-in-out;
+}
+#addClass:hover {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+/* Student records container */
+.student-record {
+    float: left;
+    border: 1px solid #d1d5db;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    width: 180px;
+    text-align: center;
+    background: #f9fafb; /* Tailwind gray-50 */
+    border-radius: 0.375rem;
+}
+
+/* Modal content styling */
+.modal-content {
+    text-align: center;
+    padding-bottom: 1.25rem;
+}
+.modal-content input,
+.modal-content select {
+    margin: 1rem 0;
+    width: 92%;
+}
+
+/* Class list */
+.classes {
+    cursor: pointer;
+    margin: 0.75rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+.classes .list p {
+    border: 1px solid #e5e7eb;
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem !important;
+    font-weight: 400 !important;
+    border-radius: 0.375rem;
+    background: #f3f4f6;
+}
